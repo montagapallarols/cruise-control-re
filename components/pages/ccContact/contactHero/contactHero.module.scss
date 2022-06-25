@@ -1,0 +1,178 @@
+@use "styles/mixins" as *;
+
+.contactTitle {
+  background-color: transparent;
+  margin-left: 60px;
+  z-index: 1;
+
+  @include mediumMedia {
+    margin-left: 250px;
+  }
+  @include desktop {
+    margin-left: 640px;
+  }
+}
+
+.contactHeroContainer {
+  height: 60vh;
+
+  @include smallMedia {
+    height: 100vh;
+  }
+
+  @include mediumMedia {
+    height: 50vh;
+  }
+}
+
+.thankYouWrapper {
+  background-color: transparent;
+  height: 70vh;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thankYouCloseIconContainer {
+  position: relative;
+  top: -80px;
+  left: 2rem;
+  width: 100%;
+  color: var(--white);
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+
+  @include smallMedia {
+    top: -30px;
+  }
+
+  @include mediumMedia {
+    left: 2rem;
+  }
+  @include desktop {
+    top: 45px;
+}
+}
+
+.thankYouWarningImageWrapper {
+  background-color: transparent;
+  margin-bottom: 40px;
+
+  @include smallMedia {
+    margin-bottom: 120px;
+  }
+
+  @include desktop {
+    margin-bottom: 80px;
+  }
+
+  img {
+    height: 52px;
+    @include smallMedia {
+      height: 68px;
+    }
+  }
+}
+
+.thankYouWarningImage {
+  background-color: transparent;
+}
+
+.thankYouLogoImageWrapper {
+  background-color: transparent;
+
+
+  img {
+    height: 100px;
+    @include smallMedia {
+      height: auto;
+    }
+  }
+}
+
+.thankYouLogoImage {
+  background-color: transparent;
+}
+
+.thankYouText {
+  color: var(--red);
+  background-color: transparent;
+  text-transform: capitalize;
+ font-size: 38px;
+  margin-bottom: 10px;
+  font-weight: 700;
+
+  @include smallMedia {
+    font-size: 58px;
+  }
+
+  @include mediumMedia {
+    text-align: center;
+  }
+  @include desktop {
+    max-width: 15%;
+  }
+}
+
+.contactHeroWrapper {
+  position: relative;
+  height: inherit;
+  background-color: transparent;
+
+}
+
+.contactHeroImageWrapper {
+  position: relative;
+  background-color: transparent;
+  height: 530px;
+  width: 100%;
+  top: -90px;
+
+  @include mediumMedia {
+    height: 1000px;
+  }
+  @include desktop {
+    height: 1200px;
+    top: -4rem;
+  }
+  @include desktopLarge {
+    height: 1575px;
+  }
+}
+
+.contactHeroImage {
+  z-index: 1;
+  background-color: transparent;
+}
+
+.contactHeroImageWrapper2 {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  height: 50rem;
+  top: -45rem;
+  left: -300px;
+  z-index:0;
+
+  @include smallMedia {
+    top: -40rem;
+  }
+
+  @include mediumMedia {
+    top: -55rem;
+    height: 50rem;
+    left: -300px;
+  }
+  @include desktop {
+    left: 25px;
+ 
+  }
+}
+
+.contactHeroImage2 {
+  z-index: 0;
+  background-color: transparent;
+}

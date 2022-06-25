@@ -1,0 +1,57 @@
+@use "styles/mixins" as *;
+
+.aboutContainer {
+  margin-top: 220px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include smallMedia {
+    margin-bottom: 100px;
+  }
+
+  @include mediumMedia {
+    margin-top: 70px;
+  }
+  @include desktop {
+    margin-top: 12rem;
+  }
+}
+
+.aboutWrapper {
+  position: relative;
+  height: inherit;
+  background-color: transparent;
+}
+
+.aboutTitle {
+  background-color: transparent;
+  z-index: 1;
+  margin-left: 60px;
+
+  @include mediumMedia {
+    margin-left: 70px;
+  }
+  @include desktop {
+    margin-left: 110px;
+  }
+}
+
+.aboutDescription {
+  background-color: transparent;
+  z-index: 1;
+  margin-top: 20px;
+  margin-left: 60px;
+
+  @include smallMedia {
+  }
+
+  @include mediumMedia {
+    margin-left: 70px;
+    margin-top: 30px;
+  }
+  @include desktop {
+    margin-left: 110px;
+  }
+}
+

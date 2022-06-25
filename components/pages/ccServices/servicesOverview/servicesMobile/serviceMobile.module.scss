@@ -1,0 +1,36 @@
+@use "styles/mixins" as *;
+
+.serviceMobileContainer {
+  background-color: transparent;
+}
+
+.serviceMobileWrapper {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30%;
+}
+
+.serviceMobileDescriptionContainer {
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.serviceMobileDescriptionTitle {
+  background-color: transparent;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.serviceMobileDescriptionText {
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2rem;
+}

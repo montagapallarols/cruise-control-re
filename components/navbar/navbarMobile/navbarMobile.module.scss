@@ -1,0 +1,40 @@
+@use "styles/mixins" as *;
+
+.navbarMobileWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+
+.navbarMobileLogoContainer {
+  position: relative;
+  width: 10rem;
+  height: 80px;
+  background-color: transparent;
+
+  @include smallMedia {
+    width: 8rem;
+    height: 3rem;
+  }
+}
+
+.navbarMobileIconContainer {
+  color: var(--white);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.navbarContactButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray1);
+  color: var(--black);
+  border-radius: 22px;
+  height: 40px;
+  min-width: 131px;
+  font-size: 16px;
+  @include animation(fadeIn, 1s);
+  margin-top: 20%;
+}

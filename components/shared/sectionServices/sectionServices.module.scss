@@ -1,0 +1,74 @@
+@use "styles/mixins" as *;
+
+.serviceDescriptionContainer,
+.serviceDescriptionAccordionContainer {
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  margin: auto 50px 30px 20px;
+}
+
+.serviceDescriptionAccordionContainer {
+  flex-direction: column;
+  width: 100%;
+  max-width: 26rem;
+
+  @include desktop {
+    max-width: 60%;
+  }
+}
+
+.serviceDescriptionAccordionHeading {
+  display: flex;
+  margin-top: 20px;
+}
+
+.serviceDescriptionTitle {
+  background-color: transparent;
+  font-size: 20px;
+  margin-bottom: 20px;
+  @include smallMedia {
+    margin: 10px auto 10px 30px;
+  }
+  @include desktop {
+  font-size: 40px;
+  }
+}
+
+.serviceDescriptionText {
+  background-color: transparent;
+  font-size: 1.2rem;
+  line-height: 20px;
+
+  @include mediumMedia {
+    line-height: 40px;
+    font-size: 18px;
+    margin-bottom: 40px;
+    @include animation(fadeIn, 1s);
+  }
+  @include desktop {
+    margin: 0 auto 0 80px;
+  }
+}
+
+.serviceIconRed {
+  background-color: transparent;
+  color: var(--red);
+}
+
+.serviceIconPurple {
+  background-color: transparent;
+  color: var(--purple);
+}
+
+.serviceIconYellow {
+  background-color: transparent;
+  color: var(--yellow);
+}
+
+.serviceIconWhite {
+  background-color: transparent;
+  color: var(--white);
+}

@@ -1,0 +1,150 @@
+@use "styles/mixins" as *;
+
+.contactFormContainer {
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  background-color: transparent;
+  top: 300px;
+  left:0;
+  right: 0;
+
+  @include mediumMedia {
+    top: 400px;
+  }
+}
+
+.contactFormIcon {
+  position: absolute;
+  top: -4rem;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+    right: 0;
+    margin: 0 auto;
+
+  @include mediumMedia {
+    display:none;
+    height: 140px;
+    width: 140px;
+    top: -2.5rem;
+  }
+
+  img {
+    background-color: transparent;
+  }
+}
+
+.contactFormWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 35px;
+  padding: 4rem 2rem 1.5rem;
+  width: 30rem;
+  margin: 0 auto;
+
+  input,
+  textarea {
+    background-color: transparent;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 0.8rem 0.5rem;
+    width: 100%;
+    font-size: 12px;
+    outline: none;
+    border: 1px solid var(--grayStroke);
+
+    @include smallMedia {
+      padding: 0.6rem 0.3rem;
+    }
+
+    @include mediumMedia {
+      font-size: 14px;
+      padding: 0.3rem 0.2rem;
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 10rem;
+    overflow-y: scroll;
+    text-align: left;
+    padding: 20px;
+    @include mediumMedia {
+      height: 110px;
+      border-radius: 0.8rem;
+    }
+  }
+
+  @include mediumMedia {
+    gap: 0.5rem;
+    width: 375px;
+    height: max-content;
+    padding: 35px 20px 30px;
+    margin: 0 auto;
+  }
+}
+
+.contactFormDateWrapper {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  @include mediumMedia {
+    gap: 0.2rem;
+  }
+}
+
+.contactFormTimeWrapper {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 20px;
+
+  @include mediumMedia {
+    gap: 0.2rem;
+  }
+
+}
+
+.contactFormButton {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 3rem;
+  padding: 1.2rem 0.5rem;
+  font-size: 12px;
+  width: 45%;
+  text-align: center;
+  align-self: center;
+  margin-top:16px;
+
+  &:hover,
+  &:active {
+    background-color: var(--white);
+    border: 0.01rem solid var(--black);
+    color: var(--black);
+    border-radius: 3rem;
+  }
+
+  @include smallMedia {
+    padding: 0.5rem 0.1rem;
+  }
+
+  @include mediumMedia {
+    padding: 0.5rem 0.1rem;
+    font-size: 16px;
+  }
+  @include desktop {
+    padding: 0;
+  }
+}

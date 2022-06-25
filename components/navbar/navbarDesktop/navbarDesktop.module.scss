@@ -1,0 +1,88 @@
+@use "styles/mixins" as *;
+
+.navbarDesktopWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbarDesktopLogoContainer {
+  position: relative;
+  width: 3rem;
+  height: 2rem;
+  align-self: flex-start;
+}
+
+.navbarDesktopMenuItemsContainer {
+  color: var(--white);
+  flex-grow: 1;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    li {
+      font-size: 14px;
+      text-decoration: none;
+      position: relative;
+      margin-right: 90px;
+     
+      @include tablet {
+        margin: 0 auto;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.02rem;
+        bottom: 0;
+        left: 0;
+        background-color: var(--white);
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      &:hover {
+        color: var(--white);
+      }
+
+      &:hover::before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.navbarDesktopButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray1);
+  color: var(--black);
+  border-radius: 1rem;
+  height: 40px;
+  min-width: 131px;
+  font-size: 16px;
+  margin-left: 14%;
+  @include animation(fadeIn, 1s);
+
+  &:hover {
+    background-color: var(--black);
+    border: 0.01rem solid var(--gray1);
+    color: var(--white);
+    border-radius: 1rem;
+  }
+
+  @include mediumMedia {
+    margin-left: unset;
+  }
+}

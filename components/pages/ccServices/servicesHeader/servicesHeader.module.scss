@@ -1,0 +1,71 @@
+@use "styles/mixins" as *;
+
+.servicesHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 130px auto 0;
+
+  @include smallMedia {
+    width: 90%;
+  }
+  @include desktop {
+  }
+}
+
+.serviceHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+
+
+  @include mediumMedia {
+    width: 90%;
+  }
+  @include desktop {
+    margin-bottom: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.serviceHeaderTitle {
+  max-width: 20%;
+  h2 {
+    font-size: 62px;
+  }
+}
+
+.serviceHeaderTitle,
+.serviceHeaderText {
+  align-self: flex-start;
+  margin-bottom: 2.5rem;
+  margin-left: 60px;
+  @include mediumMedia {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    align-self: center;
+    margin: 0;
+  }
+
+  div {
+
+    @include desktop {
+      width: auto;
+    }
+  }
+}
+
+.serviceHeaderDivider {
+  visibility: hidden;
+
+  @include mediumMedia {
+    visibility: visible;
+    border: 0.05rem solid var(--white);
+    border-radius: 1rem;
+    width: 90%;
+    background-color: var(--white);
+  }
+}

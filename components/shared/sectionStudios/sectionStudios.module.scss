@@ -1,0 +1,216 @@
+@use "styles/mixins" as *;
+
+.studioImageContainer {
+  position: relative;
+  background-color: transparent;
+  margin-bottom: 4rem;
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  @include smallMedia {
+    margin-bottom: 5rem;
+  }
+
+  @include mediumMedia {
+    top: 5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.studioImageContainerMb {
+
+  @include smallMedia {
+    margin-bottom: 17rem;
+  }
+
+  @include mediumMedia {
+    margin-bottom: 2rem;
+  }
+  @include desktop {
+    margin-bottom: 150px;
+  }
+}
+
+.studioImageWrapper {
+  position: relative;
+  height: 230px;
+  width: 290px;
+  left: 60px;
+  top: 7rem;
+
+  @include smallMedia {
+    height: 300px;
+    width: 300px;
+    top: 5rem;
+  }
+
+  @include mediumMedia {
+    left: 5rem;
+    top: 0;
+  }
+
+  @include desktop {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+.studioImage {
+  z-index: 0;
+  border-radius: 10%;
+}
+
+.studioName {
+  position: relative;
+  background-color: transparent;
+  top: 10px;
+  left: 100px;
+  z-index: 1;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 10rem;
+
+  @include smallMedia {
+    position: absolute;
+    top: 17rem;
+    font-size: 2.5rem;
+    width: 7rem;
+  }
+
+  @include mediumMedia {
+    top: 4rem;
+    left: 2.5rem;
+    font-size: 52px;
+  }
+}
+
+.studioDescription {
+  position: relative;
+  background-color: transparent;
+  color: var(--white);
+  margin-top: 126px;
+  margin-left: 50px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 29rem;
+
+  @include smallMedia {
+    position: absolute;
+    font-size: 1rem;
+    top: -120px;
+    left: 400px;
+    width: 20rem;
+  }
+
+  @include mediumMedia {
+    width: 14rem;
+  }
+
+  @include desktop {
+  left: 700px;
+  padding-right: 100px;
+  }
+
+  p,
+  span,
+  strong {
+    background-color: transparent;
+    font-size: 12px;
+    line-height:20px;
+
+    @include desktop {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    line-height: 1.3rem;
+
+    @include smallMedia {
+      line-height: 1rem;
+    }
+
+    @include mediumMedia {
+      line-height: 0.6rem;
+    }
+  }
+}
+
+.studioTextRed {
+  color: var(--red);
+}
+
+.studioTextBlack {
+  color: var(--gray3);
+}
+
+.studioTextPurple {
+  color: var(--purple);
+}
+
+.studioTextYellow {
+  color: var(--yellow);
+}
+
+.studioTextGold {
+  color: var(--gold);
+}
+
+.studioPlacementLeft {
+  left: 5rem;
+}
+
+.studioPlacementRight {
+  @include mediumMedia {
+    left: 21.5rem;
+  }
+}
+
+.studioPlacementCenter {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+
+
+  @include smallMedia {
+    left: 120px;
+    margin: unset;
+  }
+
+  @include mediumMedia {
+  }
+  @include desktop {
+    position: relative;
+    left: 230px;
+    width: 440px;
+  }
+}
+
+.studioTextPlacementCenter {
+  left: 50px;
+
+  @include smallMedia {
+    top: 20rem;
+    left: 8rem;
+  }
+
+  @include mediumMedia {
+    top: 4rem;
+    left: 6rem;
+  }
+}
+
+.studioTextPlacementRight {
+  @include mediumMedia {
+    left: 19rem;
+  }
+}
+
+.studioExpandedImages {
+  height: fit-content;
+  width: fit-content;
+}

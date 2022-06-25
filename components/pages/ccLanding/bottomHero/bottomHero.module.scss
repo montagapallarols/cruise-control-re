@@ -1,0 +1,42 @@
+@use "styles/mixins" as *;
+
+.bottomHeroContainer {
+  height: 100vh;
+
+  @include smallMedia {
+    height: 100vh;
+  }
+
+  @include mediumMedia {
+    height: 50vh;
+  }
+}
+
+.bottomHeroWrapper {
+  position: relative;
+  height: inherit;
+  background-color: transparent;
+  display: flex;
+}
+
+.bottomHeroImageWrapper {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  align-self: flex-end;
+  margin-left: -100px;
+
+  @include smallMedia {
+    top: 18rem;
+    height: 15rem;
+  }
+
+  @include mediumMedia {
+    height: 25rem;
+    top: 0;
+  }
+}
+
+.bottomHeroImage {
+  z-index: 0;
+}
