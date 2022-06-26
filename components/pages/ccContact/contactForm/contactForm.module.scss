@@ -50,6 +50,16 @@
   padding: 4rem 2rem 1.5rem;
   width: 30rem;
   margin: 0 auto;
+  margin-top: 20px;
+
+  @include mediumMedia {
+    gap: 0.5rem;
+    width: 375px;
+    height: max-content;
+    padding: 35px 20px 30px;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
 
   input,
   textarea {
@@ -82,14 +92,6 @@
       height: 110px;
       border-radius: 0.8rem;
     }
-  }
-
-  @include mediumMedia {
-    gap: 0.5rem;
-    width: 375px;
-    height: max-content;
-    padding: 35px 20px 30px;
-    margin: 0 auto;
   }
 }
 
